@@ -18,6 +18,12 @@ img {
   margin-right: auto;
 }
 
+img[alt=cube] {
+  max-width: 100%;
+  border: none;
+  background: none;
+}
+
 // Tables
 table,
 th,

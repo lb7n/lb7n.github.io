@@ -3,9 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
+title: Lauren Basmajian
 email:
-description: A simple and awesome blog theme powered by jekyll.
+description: Highly adaptable and process driven software engineer
 url: # the base hostname & protocol for your site
 keywords: ["blog", "jekyll"]
 
@@ -33,11 +33,11 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
-  avatar: leonids-logo.png
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
-  email:
+  name: Lauren Basmajian
+  avatar: face2.png
+  job: "Software Engineer"
+  bio: "Highly adaptable and process driven"
+  email: "lbasm001@gmail.com"
   disqus-shortname:
   twitter: #username
   facebook: #username
@@ -48,10 +48,10 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: vampyrafjarnskaggl
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: lauren-b-523917109
   skype: #username
   xing: #username
   instagram: #username

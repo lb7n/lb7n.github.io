@@ -1,18 +1,27 @@
 ---
 layout: post
-title: "Post with Large Feature Image and Text"
-excerpt: "Custom written post descriptions are the way to go... if you're not lazy."
-categories: [paragraph, feature photo]
+title: "Story of an Artist"
+excerpt: "Getting into art was something that was very daunting to me before I finally took the plunge. ...(cont'd)"
+categories: [art]
 comments: true
 image:
-  feature: https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
-  credit: Greg Rakozy
-  creditlink: https://unsplash.com/photos/oMpAz-DN-9I
+  feature: temporary.jpg 
+  credit:
+  creditlink:
 ---
 
-This is a sample post with a large feature image[^1] up top and tons of text. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
+<img src="/img/face1.png" width="250px" style="float:right;padding:10px">
+Getting into art was something that was very daunting to me before I finally took the plunge. I have no classical training, and never really thought I could consider myself an "artist". Then one day I went to the MoMA in San Francisco, and for the first time I felt inspired to art in the ways that I was able to, and felt no shame for where I was at in my own artistic journey. Seeing all of the different ways that art can exist through so many different mediums and skill types inspired me to explore the art in my own heart. 
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+<blockquote ><font size="5px"> "Art how you want to," is something I have found myself saying a lot since opening this chapter. </font></blockquote>
+
+<img src="/img/face2.png" width="250px" style="float:left;padding:10px">
+<font size="20px" style="bold">Everyone can be an artist</font>
+Art is about an artist and a message. It doesn't matter how you decide to portray that message, even if it is finger painting and stick figures: if you are able to relay a message to others through ANY medium, you are an artist.
+
+<br>
+<br>
+<br>
 
 ## Cupidatat 90's lo-fi authentic try-hard
 

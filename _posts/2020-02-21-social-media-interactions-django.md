@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "URL Shortener"
-date:   2020-01-05 15:07:19
+title:  "Social Media Interactions - Django"
+date:   2020-02-21 11:12:43
 categories: [Python]
 comments: true
 ---

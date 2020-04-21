@@ -1,0 +1,4 @@
+- name: Tools
+  descr: "MYSQL, AWS, Vim, Android Studio, Postman, Network Link Conditioner"
+  image: pong.png
+  github: https://github.com/vampyrafjarnskaggl

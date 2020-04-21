@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Java, Kotlin, ObjC/Swift, JavaScript, Python
-percentage: 100, 89, 57, 67, 78
+aspects: Java, Kotlin, Python, JavaScript, ObjC/Swift
+percentage: 100, 89, 78, 67, 57

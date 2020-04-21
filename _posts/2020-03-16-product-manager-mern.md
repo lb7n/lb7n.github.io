@@ -21,7 +21,7 @@ For my back end dependencies I ran the following inside of a new server folder i
 
 Inside of the server folder, before doing anything I set up my express server. 
 >server.js
-{% highlight%}
+{% highlight javascript%}
 const express = require("express");
 const cors = require('cors');
 const app = express();

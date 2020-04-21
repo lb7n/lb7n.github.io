@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Story of an Artist"
-excerpt: "Getting into art was something that was very daunting to me before I finally took the plunge. ...(cont'd)"
+excerpt: "Getting into art was something that was very daunting to me before I finally took the plunge...(cont'd)"
 categories: [art]
 comments: true
 image:

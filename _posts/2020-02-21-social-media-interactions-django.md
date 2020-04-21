@@ -71,7 +71,7 @@ class UserManager(models.Manager):
         if check_it is False:
             errors['password'] = "you typed the wrong password!"
         return errors
-{% end highlight %}
+{% endhighlight %}
 
 Made sure to create some simple and descriptive url paths to use on the front end
 (urls.py)
@@ -89,7 +89,7 @@ urlpatterns = [
     path('post_comment', views.post_comment),
     path('delete_message', views.delete_message),
 ]
-{% end highlight %}
+{% endhighlight %}
 
 Finally, I hooked up my urls to their views
 (views.py)
@@ -160,4 +160,4 @@ def delete_message(request):
     c = Message.objects.get(id=this_message)
     c.delete()
     return redirect('/wall')
-{% end highlight %}
+{% endhighlight %}

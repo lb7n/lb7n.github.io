@@ -9,14 +9,14 @@ I created a basic MERN application for handling product inventory.
 
 First step is to install and set up react and mongoose inside of my project. 
 Inside of my terminal I ran the following commands for my front end dependencies inside of my project folder: 
->npx create-react-app client
->cd my-app
->npm start
+>npx create-react-app client <br/>
+>cd my-app<br/>
+>npm start<br/>
 >npm install @reach/router
 
 For my back end dependencies I ran the following inside of a new server folder inside of my project folder:
->npm install express
->npm init -y
+>npm install express<br/>
+>npm init -y<br/>
 >npm install mongoose express
 
 Inside of the server folder, before doing anything I set up my express server. 

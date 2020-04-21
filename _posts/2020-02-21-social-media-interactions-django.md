@@ -11,7 +11,7 @@ I put the log in/validation in a simple post/message board application I built u
 
 First I created my models.
 
-(models.py)
+>(models.py)
 {% highlight python %}
 class User(models.Model):
     first_name = models.CharField(max_length=45)
@@ -39,7 +39,8 @@ class Comment(models.Model):
 {% endhighlight %}
 
 after that, I created my UserManager which housed my validators
-(models.py)
+
+>(models.py)
 {% highlight python %}
 class UserManager(models.Manager):
     def basic_validator(self, postData):
@@ -74,7 +75,8 @@ class UserManager(models.Manager):
 {% endhighlight %}
 
 Made sure to create some simple and descriptive url paths to use on the front end
-(urls.py)
+
+>(urls.py)
 {% highlight python %}
 from django.urls import path
 from . import views
@@ -92,7 +94,8 @@ urlpatterns = [
 {% endhighlight %}
 
 Finally, I hooked up my urls to their views
-(views.py)
+
+>(views.py)
 {% highlight python %}
 def index(request):
     return render(request, 'index.html')

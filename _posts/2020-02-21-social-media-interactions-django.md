@@ -13,7 +13,6 @@ First I created my models.
 
 (models.py)
 {% highlight python %}
-
 class User(models.Model):
     first_name = models.CharField(max_length=45)
     last_name = models.CharField(max_length=45)
@@ -161,4 +160,4 @@ def delete_message(request):
     c = Message.objects.get(id=this_message)
     c.delete()
     return redirect('/wall')
-{% end python %}
+{% end highlight %}

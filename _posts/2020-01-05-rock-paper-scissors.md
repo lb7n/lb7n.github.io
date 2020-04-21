@@ -6,7 +6,7 @@ categories: [Python]
 comments: true
 ---
 
-I created a simple rock, paper, scissors game that is played on the terminal using python. It was a fun exercise to practice accessing the random library.
+I created a simple rock, paper, scissors game that is played on the terminal using python.
 
 I began by importing the system and random libraries.
 

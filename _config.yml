@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: Lauren Basmajian
+title: lauren marie
 email:
 description: Highly adaptable and process driven software engineer
 url: # the base hostname & protocol for your site
@@ -33,7 +33,7 @@ kramdown:
 ####################################
 #
 owner:
-  name: Lauren Basmajian
+  name: lauren marie
   avatar: face2.png
   job: "Software Engineer"
   bio: "Highly adaptable and process driven"

@@ -9,7 +9,7 @@ comments: true
 <img src="/img/face1.png" width="250px" style="float:right;padding:10px">
 <!-- Getting into art was something that was very daunting to me before I finally took the plunge. I have no classical training, and never really thought I could consider myself an "artist". Then one day I went to the MoMA in San Francisco, and for the first time I felt inspired to art in the ways that I was able to, and felt no shame for where I was at in my own artistic journey. Seeing all of the different ways that art can exist through so many different mediums and skill types inspired me to explore the art in my own heart. 
  -->
-<blockquote ><font size="5px"> "Art how you want to," is something I think about often, it's a message I believe every person can find freedom in. </font></blockquote>
+<blockquote ><font size="5px"> "Art how you want to," is a phrase I think about a lot. <br/>It's a message I believe every person can find freedom in. </font></blockquote>
 
 <img src="/img/face2.png" width="250px" style="float:left;padding:10px">
 <font size="20px" style="bold">Everyone is an artist</font>

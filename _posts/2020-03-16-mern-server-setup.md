@@ -5,6 +5,8 @@ date:   2020-03-26 01:31:28
 categories: [JavaScript, MERN]
 comments: true
 ---
+This part of the tutorial sets up a beginning file structure skeleton for your entire project, but is focused on the relationship between your Express server and MongoDB.
+If after using this tutorial you want to check out my basic React setup tutorial, check out the link at the bottom of this page that will take you to that post.
 
 Before starting any actual programming, create a project folder that will house the server and the client. 
 Now it's time to create our client. 
@@ -131,4 +133,4 @@ module.exports = app => {
 };
 {% endhighlight %}
 
-That's it for our server! Now we can move onto our front end, and deciding how we want to display our information in our views. I am writing another post which goes into a basic front end set up more in depth.
+That's it for our server! Now we can move onto our front end, and deciding how we want to display our information in our views. I am writing another post which goes into a basic front end set up more in depth. 

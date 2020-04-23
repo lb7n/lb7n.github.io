@@ -1,25 +1,33 @@
 ---
 layout: post
-title:  "Product Manager - MERN"
+title:  "How to Basic MERN Setup"
 date:   2020-03-26 01:31:28
 categories: [JavaScript, MERN]
 comments: true
 ---
-I created a basic MERN application for handling product inventory.
 
-First step is to install and set up react and mongoose inside of my project. 
-Inside of my terminal I ran the following commands for my front end dependencies inside of my project folder: 
+Before starting any actual programming, create a project folder that will house the server and the client. 
+Now it's time to create our client. 
+* The client is our React app
+* Our server will be the Mongoose/Express portion of the project.
+
+Inside of the terminal we can run the following commands to set up front end dependencies.
+Make sure you are inside of the project folder: 
 >npx create-react-app client <br/>
 >cd my-app<br/>
 >npm start<br/>
->npm install @reach/router
+>npm i @reach/router
 
-For my back end dependencies I ran the following inside of a new server folder inside of my project folder:
->npm install express<br/>
+For our back end dependencies, we should first create a server folder inside of the project folder at the same level as our client. After navigating into the server folder from the terminal, we should first create our Server.js file that will live at the root of the server folder. While in the server folder, we can run the following commands to set up mongoose and express.:
+>npm i mongoose express cors
 >npm init -y<br/>
->npm install mongoose express
 
-Inside of the server folder, before doing anything I set up my express server. 
+
+Before going further, it's a good idea to set up the express server.
+Using cors allows us to have different domains for our server and client that can still communicate restricted resources to each other. 
+
+Setting the app to have json spaces, makes our json pretty and easily readable without having to use an external json parser.
+
 >server.js
 {% highlight javascript%}
 const express = require("express");
@@ -34,21 +42,22 @@ require("../server/config/mongoose.config");
 app.use(express.json(), express.urlencoded({ extended: true }));
 
 // This is where we import the users routes function from our user.routes.js file
-const AllMyProductRoutes = require("../server/routes/products.routes");
-AllMyProductRoutes(app);
+const AllMyFooRoutes = require("../server/routes/Foos.routes");
+AllMyFooRoutes(app);
 
 app.listen(8000, () => console.log("The server is all fired up on port 8000"));
 {%endhighlight%}
 
-For the server I had to create a models, controllers, routes, and config and folder. Inside of each of these folders lives the appropriate models/controllers/routes/config settings.
+For the server a solid file structure is having a config folder, models, controllers, and routes folder. Inside of each of the appropriate folders will be the config settings/models/controllers/routes files.
 
-Because this was a MERN application, I used mongoose in collaboration with my MongoDB
+Setting up mongoose is easy, and using it gives us access to a lot of really handy ways to interact with our MongoDB using JavaScript.
+
+Here is a sample conection
 >(mongoose.config.js)
 {% highlight javaScript %}
-  
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/products", {
+mongoose.connect("mongodb://localhost/foos", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -56,71 +65,70 @@ mongoose.connect("mongodb://localhost/products", {
     .catch(err => console.log("Something went wrong when connecting to the database", err));
 {% endhighlight %}
 
-Next it was time to create the model for my future product objects. This was a really simple MERN application, so I only used a title, price, and description in my schema.
+Inside of the models folder, we can create any models that we want to keep track of. For the purpose of this exercise, let's just create a model for 'foo'. Let's give 'foo' a title, price, and description in the schema just to have a few different input fields to work with.
 
->(products.model.js)
+>(foo.model.js)
 {% highlight javascript %}
 const mongoose = require("mongoose");
 
-const ProductSchema = new mongoose.Schema({
+const FooSchema = new mongoose.Schema({
     title: "",
     price: "",
     description: ""
 });
 
-const Product = mongoose.model("Product", ProductSchema);
+const Foo = mongoose.model("Foo", FooSchema);
 
-module.exports = Product;
+module.exports = Foo;
 {% endhighlight %}
 
-I used the product controller to handle all CRUD communications with the database
+We can use our controller to handle any CRUD communications we want to perform on the database.
 
->(products.controller.js)
+>(foo.controller.js)
 {% highlight javascript %}
-const Product = require("../models/products.model");
+const Foo = require("../models/foo.model");
 
 
-module.exports.createNewProduct = (req, res) => {
-    Product.create(req.body)
-        .then(newlyCreatedProduct => res.json({ product : newlyCreatedProduct }))
+module.exports.createNewFoo = (req, res) => {
+    Foo.create(req.body)
+        .then(newlyCreatedFoo => res.json({ Foo : newlyCreatedFoo }))
+        .catch(err => res.json({ message: "Something went wrong", error: err }));
+};
+module.exports.findAllFoos = (req, res) => {
+    Foo.find()
+        .then(allFoos => res.json({ Foos: allFoos }))
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
 
-module.exports.findAllProducts = (req, res) => {
-    Product.find()
-        .then(allProducts => res.json({ products: allProducts }))
+module.exports.findOneSingleFoo = (req, res) => {
+    Foo.findOne({ _id: req.params.id })
+        .then(oneSingleFoo => res.json({ Foo: oneSingleFoo }))
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
-
-module.exports.findOneSingleProduct = (req, res) => {
-    Product.findOne({ _id: req.params.id })
-        .then(oneSingleProduct => res.json({ product: oneSingleProduct }))
+module.exports.updateExistingFoo = (req, res) => {
+    Foo.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+        .then(updatedFoo => res.json({ Foo: updatedFoo }))
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
-module.exports.updateExistingProduct = (req, res) => {
-    Product.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-        .then(updatedProduct => res.json({ product: updatedProduct }))
-        .catch(err => res.json({ message: "Something went wrong", error: err }));
-};
-module.exports.deleteAnExistingProduct = (req, res) => {
-    Product.deleteOne({ _id: req.params.id })
+module.exports.deleteAnExistingFoo = (req, res) => {
+    Foo.deleteOne({ _id: req.params.id })
         .then(result => res.json({ result: result }))
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
 {% endhighlight %}
 
-And connected these to methods to routes to create my api endpoints.
->(products.routes.js)
+Finally, we can create our api end points so that we can access our API from the front end or an API development tool like Postman. 
+>(Foos.routes.js)
 {% highlight javascript %}
-const ProductController = require("../controllers/products.controller");
+const FooController = require("../controllers/Foos.controller");
 
 module.exports = app => {
-    app.get("/api/products/", ProductController.findAllProducts);
-    app.post("/api/products/new", ProductController.createNewProduct);
-    app.get("/api/products/:id", ProductController.findOneSingleProduct);
-    app.put("/api/products/update/:id", ProductController.updateExistingProduct);
-    app.delete("/api/products/delete/:id", ProductController.deleteAnExistingProduct);
+    app.get("/api/Foos/", FooController.findAllFoos);
+    app.post("/api/Foos/new", FooController.createNewFoo);
+    app.get("/api/Foos/:id", FooController.findOneSingleFoo);
+    app.put("/api/Foos/update/:id", FooController.updateExistingFoo);
+    app.delete("/api/Foos/delete/:id", FooController.deleteAnExistingFoo);
 };
 {% endhighlight %}
 
-Finally it is time to look at the front end of the application, which I will go into detail about in another post.
+That's it for our server! Now we can move onto our front end, and deciding how we want to display our information in our views. I am writing another post which goes into a basic front end set up more in depth.

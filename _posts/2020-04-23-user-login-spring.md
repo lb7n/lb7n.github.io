@@ -69,4 +69,5 @@ Why would we check if a password matches an email if we don't even have the emai
     }
 {%endhighlight%}
 
-(Currently editing... )
+All the logic officially exists for user login and registration! Now, it's time to hook up our authenticator to the rest of our application by connecting it to the front end with some jsp forms. In our User controller, we can reference our service file to check validity of inputted information when logging in as well as hashing the password string we store on registration. 
+It is also a good idea to store our user to the session for easy access across all of our views upon successful login or registration.

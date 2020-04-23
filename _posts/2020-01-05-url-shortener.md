@@ -5,9 +5,9 @@ date:   2020-01-05 15:07:19
 categories: [Python]
 comments: true
 ---
-I wanted to play around with Python, so I created a simple URL shortener using the 'pyshorteners' library and accessing the 'Shortener' class. 
+This is a very basic URL shortener program that utilizes the pyshorteners Python library to access TinyUrl from your terminal.
 
-A URL shortener is useful when dealing with long links.
+A URL shortener is useful when dealing with long links, and the pyshorteners API wrapper is a really simple way to do that. Another cool feature of utilizing Shortener is that we can also expand URL's that were previously shortened.
 
 {% highlight python %}
 from pyshorteners import Shortener

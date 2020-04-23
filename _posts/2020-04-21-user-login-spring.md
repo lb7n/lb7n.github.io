@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "How to create login/registration authentication in Spring"
-date:   2020-04-23 10:16:39
+date:   2020-04-21 10:16:39
 categories: [Java, Spring]
 comments: true
 ---
 <a href="/articles/2020-04/spring-pom-xml" class="btn btn-success">Dependencies Link</a>
 
-1. Create a User model.
+* Create a User model.
 >Users should have attributes for any field that users have a relationship with<br/>
 >At the very minimum, they need a User Name or E-mail to login with and a User Password<br/>
 >For a better user experience, a Password Confirmation member variable should exist on creation<br/>

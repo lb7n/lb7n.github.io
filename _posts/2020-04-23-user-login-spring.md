@@ -10,7 +10,8 @@ comments: true
 1. Create a User model.
 >Users should have attributes for any field that users have a relationship with<br/>
 >At the very minimum, they need a User Name or E-mail to login with and a User Password<br/>
->For a better user experience, a Password Confirmation member variable should exist on creation, which will NOT be stored in our database.
+>For a better user experience, a Password Confirmation member variable should exist on creation<br/>
+>The Password Confrimaton will NOT be stored in our database.
 
 In order to create a User model that requires users to confirm their password on user creation, but who's password confirmation is not stored in the databse at the time of serialization we can use the  <span style="color:green">@Transient</span> variables modifier.
 

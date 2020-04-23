@@ -2,6 +2,7 @@
 layout: post
 title: "Art how you want to"
 categories: [personal]
+date:   2020-01-06 12:12:13
 excerpt: "art farts."
 comments: true
 ---

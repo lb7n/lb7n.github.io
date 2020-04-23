@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Social Media Interactions - Django"
-date:   2020-02-21 11:12:43
+date:   2020-01-06 11:12:43
 categories: [Python, Django]
 comments: true
 ---

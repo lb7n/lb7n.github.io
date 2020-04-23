@@ -1,30 +1,24 @@
 ---
 layout: post
-title: "Rock, Paper, Scissors"
+title: "Simple Rock, Paper, Scissors"
 date:   2020-01-04 15:07:19
 categories: [Python]
 comments: true
 ---
 
-I created a simple rock, paper, scissors game that is played on the terminal using python.
+This Rock, Paper, Scissors tutorial was made using the  'random' module package from the python standard library and is played using the terminal.
 
-I began by importing the system and random libraries.
-
-{% highlight python %}
-import sys
-import random
-{% endhighlight %}
-
-next I had to build out the logic for what choices won against which choices.
-
+* Working out the logic of who wins what is a good first step, since everything about this games logic will use it.
+    1. rock wins scissors
+    2. paper wins rock
+    3. scissors wins paper
+* It's also a good idea to create a boolean where we keep track of the running state of the game, to easily replay the game without relaunching. 
 
 {% highlight python %}
 print("Welcome to Rock, Paper, Scissors!")
 
 running = False
-# rock wins scissors
-# paper wins rock
-# scissors wins paper
+
 def did_win(computer_choice, user_choice):
     if user_choice == "rock" and computer_choice == "scissors":
         return True
@@ -33,10 +27,11 @@ def did_win(computer_choice, user_choice):
     elif user_choice == "paper" and computer_choice == "rock":
         return True
     return False
-
 {% endhighlight %}
 
-I then built out the actual game play logic in a separate function, which would use the logic from the did_win function above.
+Now that our game knows the underlying logic, we can build out the rest.
+
+* keeping an array that stores all of the possible options is a great way to save space, we know which word is at which index so we
 
 {% highlight python %}
 def gameplay():
@@ -44,7 +39,6 @@ def gameplay():
     options = ["rock", "paper", "scissors"]
     # make computer choose randomly
     computer_choice = random.choice(options)
-    print("**************************" + computer_choice)
 
     user_choice = input("Type your choice: ROCK, PAPER or SCISSORS")
     user_choice = user_choice.lower()
@@ -65,7 +59,7 @@ def gameplay():
 
 {% endhighlight %}
 
-I then checked whether the user wanted to continue to play or not.
+At the end of all of this, we can make use of our running boolean and choose whether or not to replay the game.
 
 {% highlight python %}
 def yesno():
@@ -84,8 +78,8 @@ def replay():
     yesno()
 {% endhighlight %}
 
+Finally, with all of the logic in place and working we can initialize a game. Because we created a different response on startup than on replay we should also let the program know which one to call first. Time to wrap up our program!
 
-initialize the game:
 {% highlight python %}
 def initial():
     global running
@@ -104,3 +98,5 @@ while True:
     else:
         initial()
 {% endhighlight %}
+
+Run your python script in your terminal, and play until you are satisfied with the results!

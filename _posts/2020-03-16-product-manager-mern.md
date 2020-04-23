@@ -2,7 +2,7 @@
 layout: post
 title:  "Product Manager - MERN"
 date:   2020-03-26 01:31:28
-categories: [JavaScript]
+categories: [JavaScript, MERN]
 comments: true
 ---
 I created a basic MERN application for handling product inventory.

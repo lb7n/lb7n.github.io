@@ -2,7 +2,7 @@
 layout: post
 title:  "Social Media Interactions - Django"
 date:   2020-02-21 11:12:43
-categories: [Python]
+categories: [Python, Django]
 comments: true
 ---
 On brand with the python groove I have been in, I thought it would be neat to have a simple user log in/registration with validations in my arsenal. 

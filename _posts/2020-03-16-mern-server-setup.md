@@ -21,8 +21,8 @@ Make sure you are inside of the project folder:
 >npm i @reach/router
 
 For our back end dependencies, we should first create a server folder inside of the project folder at the same level as our client. After navigating into the server folder from the terminal, we should first create our Server.js file that will live at the root of the server folder. While in the server folder, we can run the following commands to set up mongoose and express.:
->npm i mongoose express cors
->npm init -y<br/>
+>npm i mongoose express cors<br/>
+>npm init -y
 
 
 Before going further, it's a good idea to set up the express server.

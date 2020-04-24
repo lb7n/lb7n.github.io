@@ -2,7 +2,7 @@
 layout: post
 title:  "Handy Dandy Spring Dependencies for Pom"
 date:   2020-04-18 1:34:21
-categories: [Java, Spring]
+categories: [Spring, XML]
 comments: true
 ---
 Project Dependencies:
